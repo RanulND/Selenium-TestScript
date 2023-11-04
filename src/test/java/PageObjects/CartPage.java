@@ -10,6 +10,8 @@ public class CartPage {
     private final String url = "https://academybugs.com/my-cart/";
     private final WebDriver driver;
     private final WebDriverWait wait;
+
+    // locators
     private final By updateInputField = By.className("ec_quantity");
     private final By updateButton = By.className("ec_cartitem_update_button");
     private final By deleteButton = By.className("ec_cartitem_delete");

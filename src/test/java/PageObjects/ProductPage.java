@@ -18,6 +18,8 @@ public class ProductPage {
     private final By successMessageSectionXpath = By.xpath("//div[@class='ec_product_added_to_cart']");
     private final By paginationButtonXpath = By.xpath("//a[normalize-space()='50']");
     private final By productCardClassName = By.className("ec_product_li");
+    private final By productCardLink = By.xpath("//div[@id='ec_product_image_effect_4481370']//a[@class='ec_image_link_cover']");
+
 
     public ProductPage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
@@ -44,5 +46,9 @@ public class ProductPage {
 
     public List<WebElement> getProductCardsByClassName() {
         return driver.findElements(productCardClassName);
+    }
+
+    public void clickProductCardLink() {
+         driver.findElement(productCardLink).click();
     }
 }
