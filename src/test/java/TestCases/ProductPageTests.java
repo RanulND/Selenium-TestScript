@@ -12,7 +12,7 @@ import java.util.List;
 public class ProductPageTests extends TestBase {
 
     @Test
-    public void addToCard_SuccessMessage_Pass() {
+    public void addToCard_SuccessMessage_Pass() throws InterruptedException {
         ProductPage pp = new ProductPage(driver, wait);
         driver.get(properties.getProperty("productsUrl"));
 
@@ -21,13 +21,14 @@ public class ProductPageTests extends TestBase {
 
         // Checks the visibility of success message
         Boolean b = pp.getSuccessMessageSection().isDisplayed();
+        Thread.sleep(5000);
 
         // Assertion
         Assert.assertEquals(Boolean.TRUE,b);
     }
 
     @Test
-    public void addToCard_SuccessMessage_Fail() throws TimeoutException {
+    public void addToCard_SuccessMessage_Fail() throws TimeoutException, InterruptedException {
         ProductPage pp = new ProductPage(driver, wait);
         driver.get(properties.getProperty("productsUrl"));
 
@@ -41,6 +42,8 @@ public class ProductPageTests extends TestBase {
             // Assertion
             Assert.assertTrue(true, "TimeoutException was thrown as expected.");
         }
+        Thread.sleep(5000);
+
     }
 
     @Test

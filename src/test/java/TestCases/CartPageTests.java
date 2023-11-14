@@ -14,7 +14,8 @@ public class CartPageTests extends TestBase {
     public Object[][] testQuantities() {
         return new Object[][]{
                 {2},
-                {5},
+                {3},
+                {10},
         };
     }
 
