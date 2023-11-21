@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CartPage {
-    private final String url = "https://academybugs.com/my-cart/";
     private final WebDriver driver;
     private final WebDriverWait wait;
 
